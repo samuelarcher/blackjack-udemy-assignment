@@ -51,21 +51,13 @@ class Dealer():
 
         next_card = self.__get_next_card()
 
-        print("Line {} of file {}...".format(inspect.currentframe().f_lineno, __file__))
-
         if face_up:
             next_card.turn_face_up()
-
-        print("Line {} of file {}...".format(inspect.currentframe().f_lineno, __file__))
 
         if self.__hand is None:
             self.__hand = Hand()
 
-        print("Line {} of file {}...".format(inspect.currentframe().f_lineno, __file__))
-
         self.__hand.add_card(next_card)
-
-        # print("    Card has been dealt to self")
 
     def stand_or_hit_according_to_house_rules(self):
         """
@@ -101,12 +93,6 @@ class Dealer():
 
     def settle_round(self, table, players):
 
-        # print("\n\n", flush=True)
-        # print("*" * 72, flush=True)
-        # print("Settling up...", flush=True)
-        #
-        # print("\n*** Dealer has hand {}\n".format(self.__hand), flush=True)
-
         msg = "Dealer has hand {}\n".format(self.__hand)
 
         if self.is_bust():
@@ -140,8 +126,6 @@ class Dealer():
         else:
             # Pay players who have a better hand;
             # Fine players who have a worse hand
-
-            # print("Figuring out winners/losers...")
 
             for player in players:
 

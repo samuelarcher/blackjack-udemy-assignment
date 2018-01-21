@@ -26,8 +26,6 @@ class Player():
         bet_amount = 0
         input_ok = False
 
-        print("Line {} of file {}...".format(inspect.currentframe().f_lineno, __file__))
-
         while not input_ok:
 
             user_input = SimpleGUI.ask_text_input(
